@@ -15,7 +15,7 @@
         {
             Console.WriteLine($"ID: {utgift.Id}, Title: {utgift.Title}, " +
                               $"Customer ID: {utgift.CustomerId}, Service ID: {utgift.ServiceId}, " +
-                              $"Revenue: {utgift.Revenue}, Expenditure: {utgift.Expenditure}, " +
+                              $"Revenue: {utgift.Revenue} kr, Expenditure: {utgift.Expenditure} kr, " +
                               $"Datetime: {utgift.Datetime}");
         }
     }

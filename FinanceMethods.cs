@@ -10,7 +10,7 @@ public class FinanceMethods
 
         using var cmd = new NpgsqlCommand(selectQuery, connection);
         var result = cmd.ExecuteScalar();
-        Console.WriteLine("Utgifter: {result}");
+        Console.WriteLine($"Utgifter: {result} kr");
     }
 
     public List<Finance> GetAllUtgifter()
