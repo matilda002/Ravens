@@ -6,7 +6,7 @@ public class DatabaseConnection
 
     public DatabaseConnection()
     {
-        _connectionString = "";
+        _connectionString = "Host=localhost;Username=postgres;Password=sys23m;Database=ravens;";
     }
 
     public NpgsqlConnection GetConnection()

@@ -1,20 +1,10 @@
-using System.Runtime.CompilerServices;
-using Npgsql;
 public class Finance
 {
-    public void GetUtgifter()
-    {
-        using (var connection = new DatabaseConnection().GetConnection())
-        {
-            connection.Open();
-            string selectQuery = "Select sum(Utgifter) from Finans";
-
-            using (var cmd = new NpgsqlCommand(selectQuery, connection))
-            {
-                var result = cmd.ExecuteScalar();
-                Console.WriteLine("Utgifter: {result}");
-            }
-
-        }
-    }
+    public int Id { get; set; }
+    public required string Title { get; set; }
+    public int CustomerId { get; set; }
+    public int ServiceId { get; set; }
+    public double  Revenue { get; set; }
+    public double  Expenditure { get; set; }
+    public DateTime Datetime { get; set; }
 }
