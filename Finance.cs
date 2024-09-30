@@ -1,3 +1,5 @@
+namespace Ravens;
+
 public class Finance
 {
     public int Id { get; set; }

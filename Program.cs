@@ -1,11 +1,13 @@
-﻿class Program
+﻿namespace Ravens;
+
+class Program
 {
     static void Main(string[] args)
     {
         var financeMethods = new FinanceMethods();
 
         // Test GetUtgifter
-        Console.WriteLine("Testing GetUtgifter method:");
+        Console.WriteLine("\nTesting GetUtgifter method:");
         financeMethods.GetUtgifter();
 
         // Test GetAllUtgifter

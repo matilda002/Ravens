@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using Npgsql;
+namespace Ravens;
 public class FinanceMethods
 {
     public void GetUtgifter()
