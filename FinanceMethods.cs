@@ -35,7 +35,7 @@ public class FinanceMethods
                         ServiceId = reader.GetInt32(3),
                         Revenue = reader.GetDouble(4),
                         Expenditure = reader.GetDouble(5),
-                        Datetime = reader.GetDateTime(6)
+                        Date = reader.GetDateTime(6)
                     };
                     utgifterList.Add(finans);
                 }

@@ -13,10 +13,8 @@
         var utgifter = financeMethods.GetAllUtgifter();
         foreach (var utgift in utgifter)
         {
-            Console.WriteLine($"ID: {utgift.Id}, Title: {utgift.Title}, " +
-                              $"Customer ID: {utgift.CustomerId}, Service ID: {utgift.ServiceId}, " +
-                              $"Revenue: {utgift.Revenue} kr, Expenditure: {utgift.Expenditure} kr, " +
-                              $"Datetime: {utgift.Datetime}");
+            Console.WriteLine($"Titel: {utgift.Title}, Kund ID: {utgift.CustomerId}, " +
+                              $"Utgifter: {utgift.Expenditure} kr, Datum: {utgift.Date.ToShortDateString()}");
         }
     }
 }
