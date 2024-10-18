@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Ravens;
+
+var test = new FinanceRevenue();
+
+test.GetRevenue();
+test.GetCurrentDateRevenue();
