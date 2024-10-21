@@ -1,5 +1,7 @@
 ﻿using Npgsql;
 
+namespace Ravens;
+
 public class DatabaseConnection
 {
     private readonly string _connectionString;
