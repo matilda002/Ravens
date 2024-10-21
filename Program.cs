@@ -5,18 +5,20 @@ class Program
     static void Main(string[] args)
     {
         var financeMethods = new FinanceMethods();
-
-        // Test GetUtgifter
-        Console.WriteLine("\nTesting GetUtgifter method:");
+        
+        Console.WriteLine("\n");
         financeMethods.GetUtgifter();
 
-        // Test GetAllUtgifter
-        Console.WriteLine("\nTesting GetAllUtgifter method:");
+        Console.WriteLine("\n");
         var utgifter = financeMethods.GetAllUtgifter();
+
+        Console.WriteLine($"{"Titel",-25}{"Kund ID",-12}{"Utgifter",-15}{"Datum",-15}");
+        Console.WriteLine(new string('-', 70));
+
         foreach (var utgift in utgifter)
         {
-            Console.WriteLine($"Titel: {utgift.Title}, Kund ID: {utgift.CustomerId}, " +
-                              $"Utgifter: {utgift.Expenditure} kr, Datum: {utgift.Date.ToShortDateString()}");
+            Console.WriteLine($"{utgift.Title,-25}{utgift.CustomerId,-12}" +
+                              $"{utgift.Expenditure,-15}{utgift.Date.ToShortDateString(),-15}");
         }
 
         var test = new FinanceRevenue();
