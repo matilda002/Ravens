@@ -6,17 +6,19 @@ class Program
     {
         var financeMethods = new FinanceMethods();
 
-        // Test GetUtgifter
         Console.WriteLine("\nTesting GetUtgifter method:");
         financeMethods.GetUtgifter();
 
-        // Test GetAllUtgifter
         Console.WriteLine("\nTesting GetAllUtgifter method:");
         var utgifter = financeMethods.GetAllUtgifter();
+
+        Console.WriteLine($"{"Titel",-30}{"Kund ID",-10}{"Utgifter",-15}{"Datum",-15}");
+        Console.WriteLine(new string('-', 70));
+
         foreach (var utgift in utgifter)
         {
-            Console.WriteLine($"Titel: {utgift.Title}, Kund ID: {utgift.CustomerId}, " +
-                              $"Utgifter: {utgift.Expenditure} kr, Datum: {utgift.Date.ToShortDateString()}");
+            Console.WriteLine($"{utgift.Title,-30}{utgift.CustomerId,-10}" +
+                              $"{utgift.Expenditure,-15}{utgift.Date.ToShortDateString(),-15}");
         }
     }
 }
