@@ -1,4 +1,4 @@
-﻿namespace Ravens;
+namespace Ravens;
 
 class Program
 {
@@ -20,5 +20,10 @@ class Program
             Console.WriteLine($"{utgift.Title,-25}{utgift.CustomerId,-12}" +
                               $"{utgift.Expenditure,-15}{utgift.Date.ToShortDateString(),-15}");
         }
+
+        var test = new FinanceRevenue();
+
+        test.GetRevenue();
+        test.GetCurrentDateRevenue();
     }
 }
